@@ -174,7 +174,7 @@ div#notebook {
 
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">HTML</span>
@@ -202,7 +202,7 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[1]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[9]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <script>
@@ -228,7 +228,7 @@ $( document ).ready(code_toggle);
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">Image</span>
@@ -244,7 +244,7 @@ $( document ).ready(code_toggle);
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[2]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[10]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <img src="http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,h_1440,w_720,f_auto,q_90/v1/266982/SafeGraph_Logo_dbxlzu.jpg"/>
@@ -267,7 +267,7 @@ $( document ).ready(code_toggle);
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="kn">from</span> <span class="nn">b2b_data_report_functions</span> <span class="k">import</span> <span class="o">*</span>
@@ -280,7 +280,7 @@ $( document ).ready(code_toggle);
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">last_period</span><span class="p">,</span> <span class="n">this_period</span> <span class="o">=</span> <span class="n">get_most_recent_periods</span><span class="p">()</span>
@@ -293,11 +293,11 @@ $( document ).ready(code_toggle);
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">products</span> <span class="o">=</span> <span class="n">get_products_list</span><span class="p">(</span><span class="n">this_period</span><span class="p">)</span>
-<span class="n">these_cdn</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;CloudFlare&#39;</span><span class="p">,</span> <span class="s">&#39;Amazon CloudFront&#39;</span><span class="p">,</span> <span class="s">&#39;Flowplayer&#39;</span><span class="p">,</span> <span class="s">&#39;Fastly&#39;</span><span class="p">,</span> <span class="s">&#39;Akamai Intelligent Platform&#39;</span><span class="p">]</span>
+<span class="n">these_cdn</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;CloudFlare&#39;</span><span class="p">,</span> <span class="s">&#39;Amazon CloudFront&#39;</span><span class="p">,</span> <span class="s">&#39;MaxCDN&#39;</span><span class="p">,</span> <span class="s">&#39;Fastly&#39;</span><span class="p">,</span> <span class="s">&#39;Akamai Intelligent Platform&#39;</span><span class="p">]</span>
 <span class="n">top_cdn</span> <span class="o">=</span> <span class="n">products</span><span class="p">[</span><span class="n">products</span><span class="o">.</span><span class="n">product_name</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">these_cdn</span><span class="p">)]</span>
 <span class="nb">print</span><span class="p">(</span><span class="s">&quot;This report covers the the top 5 Content Delivery Network (CDN) products between {0} to {1}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">last_period</span><span class="p">,</span> <span class="n">this_period</span><span class="p">))</span>
 <span class="n">top_cdn</span><span class="p">[[</span><span class="s">&#39;vendor_name&#39;</span><span class="p">,</span> <span class="s">&#39;vendor_url&#39;</span><span class="p">,</span> <span class="s">&#39;product_name&#39;</span><span class="p">,</span> <span class="s">&#39;product_url&#39;</span><span class="p">,</span> <span class="s">&#39;bucket&#39;</span><span class="p">,</span> <span class="s">&#39;tier_1_category&#39;</span><span class="p">,</span> <span class="s">&#39;primary_category&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span> <span class="k">True</span><span class="p">)</span>
@@ -318,7 +318,7 @@ $( document ).ready(code_toggle);
 </div>
 </div>
 
-<div class="output_area"><div class="prompt output_prompt">Out[5]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[13]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -348,6 +348,16 @@ $( document ).ready(code_toggle);
     </tr>
     <tr>
       <th>1</th>
+      <td>MaxCDN</td>
+      <td>maxcdn.com</td>
+      <td>MaxCDN</td>
+      <td>https://www.maxcdn.com</td>
+      <td>DevOps and IT</td>
+      <td>Hosting</td>
+      <td>Content Delivery Network (CDN)</td>
+    </tr>
+    <tr>
+      <th>2</th>
       <td>Akamai</td>
       <td>akamai.com</td>
       <td>Akamai Intelligent Platform</td>
@@ -357,21 +367,11 @@ $( document ).ready(code_toggle);
       <td>Content Delivery Network (CDN)</td>
     </tr>
     <tr>
-      <th>2</th>
+      <th>3</th>
       <td>Amazon Web Services</td>
       <td>aws.amazon.com</td>
       <td>Amazon CloudFront</td>
       <td>https://aws.amazon.com/cloudfront/</td>
-      <td>DevOps and IT</td>
-      <td>Hosting</td>
-      <td>Content Delivery Network (CDN)</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Flowplayer</td>
-      <td>flowplayer.org</td>
-      <td>Flowplayer</td>
-      <td>https://flowplayer.org/</td>
       <td>DevOps and IT</td>
       <td>Hosting</td>
       <td>Content Delivery Network (CDN)</td>
@@ -399,7 +399,7 @@ $( document ).ready(code_toggle);
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="nb">print</span><span class="p">(</span><span class="s">&quot;Download the csv here: link&quot;</span><span class="p">)</span>
@@ -424,6 +424,58 @@ $( document ).ready(code_toggle);
 </div>
 
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -435,7 +487,7 @@ $( document ).ready(code_toggle);
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">summary</span> <span class="o">=</span> <span class="n">make_summary</span><span class="p">(</span><span class="n">this_period</span><span class="p">,</span> <span class="n">last_period</span><span class="p">,</span> <span class="n">top_cdn</span><span class="p">)</span>
@@ -450,7 +502,7 @@ $( document ).ready(code_toggle);
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[7]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[15]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -478,6 +530,15 @@ $( document ).ready(code_toggle);
     </tr>
     <tr>
       <th>1</th>
+      <td>MaxCDN</td>
+      <td>MaxCDN</td>
+      <td>274</td>
+      <td>275</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
       <td>Fastly</td>
       <td>Fastly</td>
       <td>1215</td>
@@ -486,7 +547,7 @@ $( document ).ready(code_toggle);
       <td>99</td>
     </tr>
     <tr>
-      <th>2</th>
+      <th>3</th>
       <td>Amazon Web Services</td>
       <td>Amazon CloudFront</td>
       <td>1666</td>
@@ -495,22 +556,13 @@ $( document ).ready(code_toggle);
       <td>0</td>
     </tr>
     <tr>
-      <th>3</th>
+      <th>4</th>
       <td>Akamai</td>
       <td>Akamai Intelligent Platform</td>
       <td>2748</td>
       <td>2691</td>
       <td>177</td>
       <td>234</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Flowplayer</td>
-      <td>Flowplayer</td>
-      <td>5127</td>
-      <td>5335</td>
-      <td>1375</td>
-      <td>1167</td>
     </tr>
   </tbody>
 </table>
@@ -525,7 +577,7 @@ $( document ).ready(code_toggle);
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="nb">print</span><span class="p">(</span><span class="s">&quot;Download the csv here: link&quot;</span><span class="p">)</span>
@@ -570,7 +622,7 @@ $( document ).ready(code_toggle);
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">switch_report</span> <span class="o">=</span> <span class="n">make_switch_report</span><span class="p">(</span><span class="n">this_period</span><span class="p">,</span> <span class="n">last_period</span><span class="p">,</span> <span class="n">top_cdn</span><span class="p">)</span>
@@ -585,7 +637,7 @@ $( document ).ready(code_toggle);
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[9]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[17]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -619,9 +671,9 @@ $( document ).ready(code_toggle);
     </tr>
     <tr>
       <th>3</th>
-      <td>Flowplayer</td>
+      <td>MaxCDN</td>
       <td>Akamai Intelligent Platform</td>
-      <td>7</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>4</th>
@@ -643,7 +695,7 @@ $( document ).ready(code_toggle);
     </tr>
     <tr>
       <th>7</th>
-      <td>Flowplayer</td>
+      <td>MaxCDN</td>
       <td>Amazon CloudFront</td>
       <td>0</td>
     </tr>
@@ -667,9 +719,9 @@ $( document ).ready(code_toggle);
     </tr>
     <tr>
       <th>11</th>
-      <td>Flowplayer</td>
+      <td>MaxCDN</td>
       <td>CloudFlare</td>
-      <td>3</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>12</th>
@@ -691,33 +743,33 @@ $( document ).ready(code_toggle);
     </tr>
     <tr>
       <th>15</th>
-      <td>Flowplayer</td>
+      <td>MaxCDN</td>
       <td>Fastly</td>
-      <td>7</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>16</th>
       <td>Akamai Intelligent Platform</td>
-      <td>Flowplayer</td>
-      <td>13</td>
+      <td>MaxCDN</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>17</th>
       <td>Amazon CloudFront</td>
-      <td>Flowplayer</td>
+      <td>MaxCDN</td>
       <td>0</td>
     </tr>
     <tr>
       <th>18</th>
       <td>CloudFlare</td>
-      <td>Flowplayer</td>
-      <td>2</td>
+      <td>MaxCDN</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>19</th>
       <td>Fastly</td>
-      <td>Flowplayer</td>
-      <td>2</td>
+      <td>MaxCDN</td>
+      <td>0</td>
     </tr>
   </tbody>
 </table>
@@ -732,7 +784,7 @@ $( document ).ready(code_toggle);
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="nb">print</span><span class="p">(</span><span class="s">&quot;Download the csv here: link&quot;</span><span class="p">)</span>
@@ -768,7 +820,7 @@ $( document ).ready(code_toggle);
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">cpe_dict</span> <span class="o">=</span> <span class="n">cpe_dict</span> <span class="o">=</span> <span class="n">make_cpe_dict</span><span class="p">([</span><span class="n">this_period</span><span class="p">,</span> <span class="n">last_period</span><span class="p">])</span>
@@ -781,7 +833,7 @@ $( document ).ready(code_toggle);
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">switch_report</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
@@ -816,18 +868,6 @@ $( document ).ready(code_toggle);
 
 
 
-7 customers switched from Flowplayer to Akamai Intelligent Platform:
-
-- Gamedayr
-- IBM
-- Origami Designs
-- Schneider Electric
-- Slant Magazine
-- WAVY-TV
-- WrestleZone.com
-
-
-
 3 customers switched from Akamai Intelligent Platform to CloudFlare:
 
 - BookMyShow
@@ -843,14 +883,6 @@ $( document ).ready(code_toggle);
 
 
 
-3 customers switched from Flowplayer to CloudFlare:
-
-- Dharmendra Pratap-DP
-- Healthy Foodie
-- VelociData
-
-
-
 1 customers switched from Akamai Intelligent Platform to Fastly:
 
 - Golf Channel
@@ -860,50 +892,6 @@ $( document ).ready(code_toggle);
 1 customers switched from CloudFlare to Fastly:
 
 - Stasislabs
-
-
-
-7 customers switched from Flowplayer to Fastly:
-
-- Adobe
-- Eidosmontreal
-- Foodcorps
-- Network World
-- Philadelphia Eagles
-- Radass.com
-- Yahoo!
-
-
-
-13 customers switched from Akamai Intelligent Platform to Flowplayer:
-
-- Buzznet
-- Daily Two Cents
-- Gallipolis Daily Tribune
-- Kate Spade &amp; Company
-- Kearney Hub
-- Lucky Brand Jeans
-- National Hockey League
-- PtPleasantRegister
-- Richmond Times-Dispatch
-- Times Leader
-- Tulsa World
-- WacoTrib.com
-- fredericksburg.com
-
-
-
-2 customers switched from CloudFlare to Flowplayer:
-
-- Optionalpha
-- Websolutions
-
-
-
-2 customers switched from Fastly to Flowplayer:
-
-- Green Life Guides
-- Moviepilot
 
 
 
