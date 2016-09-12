@@ -283,7 +283,9 @@ $( document ).ready(code_toggle);
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">last_period</span><span class="p">,</span> <span class="n">this_period</span> <span class="o">=</span> <span class="n">get_most_recent_periods</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span class="c">#last_period, this_period = get_most_recent_periods()</span>
+<span class="n">last_period</span> <span class="o">=</span> <span class="s">&#39;2016-08-14&#39;</span>
+<span class="n">this_period</span> <span class="o">=</span> <span class="s">&#39;2016-08-28&#39;</span>
 </pre></div>
 
 </div>
@@ -299,8 +301,8 @@ $( document ).ready(code_toggle);
 <div class=" highlight hl-ipython3"><pre><span class="n">products</span> <span class="o">=</span> <span class="n">get_products_list</span><span class="p">(</span><span class="n">this_period</span><span class="p">)</span>
 <span class="n">these_cdn</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;CloudFlare&#39;</span><span class="p">,</span> <span class="s">&#39;Amazon CloudFront&#39;</span><span class="p">,</span> <span class="s">&#39;MaxCDN&#39;</span><span class="p">,</span> <span class="s">&#39;Fastly&#39;</span><span class="p">,</span> <span class="s">&#39;Akamai Intelligent Platform&#39;</span><span class="p">]</span>
 <span class="n">top_cdn</span> <span class="o">=</span> <span class="n">products</span><span class="p">[</span><span class="n">products</span><span class="o">.</span><span class="n">product_name</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">these_cdn</span><span class="p">)]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s">&quot;This report covers the the top 5 Content Delivery Network (CDN) products between {0} to {1}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">last_period</span><span class="p">,</span> <span class="n">this_period</span><span class="p">))</span>
-<span class="n">top_cdn</span><span class="p">[[</span><span class="s">&#39;vendor_name&#39;</span><span class="p">,</span> <span class="s">&#39;vendor_url&#39;</span><span class="p">,</span> <span class="s">&#39;product_name&#39;</span><span class="p">,</span> <span class="s">&#39;product_url&#39;</span><span class="p">,</span> <span class="s">&#39;bucket&#39;</span><span class="p">,</span> <span class="s">&#39;tier_1_category&#39;</span><span class="p">,</span> <span class="s">&#39;primary_category&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span> <span class="k">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s">&quot;This report covers the top 5 Content Delivery Network (CDN) products between {0} to {1}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">last_period</span><span class="p">,</span> <span class="n">this_period</span><span class="p">))</span>
+<span class="n">top_cdn</span><span class="p">[[</span><span class="s">&#39;vendor_name&#39;</span><span class="p">,</span> <span class="s">&#39;vendor_url&#39;</span><span class="p">,</span> <span class="s">&#39;product_name&#39;</span><span class="p">,</span> <span class="s">&#39;product_url&#39;</span><span class="p">,</span> <span class="s">&#39;bucket&#39;</span><span class="p">,</span> <span class="s">&#39;tier_1_category&#39;</span><span class="p">,</span> <span class="s">&#39;primary_category&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span> <span class="k">True</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span> <span class="s">&#39;product_name&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -313,7 +315,7 @@ $( document ).ready(code_toggle);
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>This report covers the the top 5 Content Delivery Network (CDN) products between 2016-08-14 to 2016-08-28
+<pre>This report covers the top 5 Content Delivery Network (CDN) products between 2016-08-14 to 2016-08-28
 </pre>
 </div>
 </div>
@@ -336,26 +338,6 @@ $( document ).ready(code_toggle);
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th>0</th>
-      <td>Fastly</td>
-      <td>fastly.com</td>
-      <td>Fastly</td>
-      <td>fastly.com</td>
-      <td>DevOps and IT</td>
-      <td>Hosting</td>
-      <td>Content Delivery Network (CDN)</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>MaxCDN</td>
-      <td>maxcdn.com</td>
-      <td>MaxCDN</td>
-      <td>https://www.maxcdn.com</td>
-      <td>DevOps and IT</td>
-      <td>Hosting</td>
-      <td>Content Delivery Network (CDN)</td>
-    </tr>
     <tr>
       <th>2</th>
       <td>Akamai</td>
@@ -382,6 +364,26 @@ $( document ).ready(code_toggle);
       <td>cloudflare.com</td>
       <td>CloudFlare</td>
       <td>http://www.cloudflare.com</td>
+      <td>DevOps and IT</td>
+      <td>Hosting</td>
+      <td>Content Delivery Network (CDN)</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>Fastly</td>
+      <td>fastly.com</td>
+      <td>Fastly</td>
+      <td>fastly.com</td>
+      <td>DevOps and IT</td>
+      <td>Hosting</td>
+      <td>Content Delivery Network (CDN)</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>MaxCDN</td>
+      <td>maxcdn.com</td>
+      <td>MaxCDN</td>
+      <td>https://www.maxcdn.com</td>
       <td>DevOps and IT</td>
       <td>Hosting</td>
       <td>Content Delivery Network (CDN)</td>
@@ -521,33 +523,15 @@ $( document ).ready(code_toggle);
   <tbody>
     <tr>
       <th>0</th>
-      <td>Cloudflare</td>
-      <td>CloudFlare</td>
-      <td>13609</td>
-      <td>13866</td>
-      <td>322</td>
-      <td>65</td>
+      <td>Akamai</td>
+      <td>Akamai Intelligent Platform</td>
+      <td>2740</td>
+      <td>2682</td>
+      <td>177</td>
+      <td>235</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>MaxCDN</td>
-      <td>MaxCDN</td>
-      <td>274</td>
-      <td>274</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Fastly</td>
-      <td>Fastly</td>
-      <td>1209</td>
-      <td>1240</td>
-      <td>132</td>
-      <td>101</td>
-    </tr>
-    <tr>
-      <th>3</th>
       <td>Amazon Web Services</td>
       <td>Amazon CloudFront</td>
       <td>1409</td>
@@ -556,13 +540,31 @@ $( document ).ready(code_toggle);
       <td>0</td>
     </tr>
     <tr>
+      <th>2</th>
+      <td>Cloudflare</td>
+      <td>CloudFlare</td>
+      <td>13609</td>
+      <td>13866</td>
+      <td>322</td>
+      <td>65</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Fastly</td>
+      <td>Fastly</td>
+      <td>1209</td>
+      <td>1240</td>
+      <td>132</td>
+      <td>101</td>
+    </tr>
+    <tr>
       <th>4</th>
-      <td>Akamai</td>
-      <td>Akamai Intelligent Platform</td>
-      <td>2740</td>
-      <td>2682</td>
-      <td>177</td>
-      <td>235</td>
+      <td>MaxCDN</td>
+      <td>MaxCDN</td>
+      <td>274</td>
+      <td>274</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
   </tbody>
 </table>
